@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/txt_register_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/please_click_on_the_relevant_image"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="#000"
+            android:textSize="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="horizontal"
+            android:layout_marginTop = "15dp"
+            android:layout_centerVertical="true">
+        <ImageView
+            android:id="@+id/imgCoach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft = "5dp"
+            android:src="@drawable/ic_coach"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:background="@drawable/border"/>
+
+        <ImageView
+            android:id="@+id/imgStudent"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight ="5dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_student"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:background="@drawable/border"/>
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

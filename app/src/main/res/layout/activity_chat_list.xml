@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDE1F8"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        android:scrollbars="vertical"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/sss"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/llChatBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding4"
+            android:paddingRight="@dimen/padding4"
+            android:paddingBottom="@dimen/padding4">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:cardElevation="0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:cardCornerRadius="24dp"
+                app:cardBackgroundColor="#fff">
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/padding2"
+                    android:layout_marginBottom="@dimen/padding2"
+                    android:background="@null"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="start"
+                    android:hint="Bir mesaj yazın..."
+                    android:inputType="textMultiLine|textCapSentences|textNoSuggestions|text"
+                    android:maxEms="5"
+                    android:maxLines="5"
+                    android:paddingStart="@dimen/padding20"
+                    android:paddingLeft="@dimen/padding46"
+                    android:paddingTop="@dimen/padding8"
+                    android:paddingEnd="@dimen/padding46"
+                    android:paddingRight="@dimen/padding46"
+                    android:paddingBottom="@dimen/padding10"
+                    android:text=""
+                    android:textAlignment="viewStart"
+                    android:textColorHint="#929292"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:visibility="gone"
+                    android:layout_gravity="start|center_vertical"
+                    app:srcCompat="@drawable/ic_photo" />
+                <ImageView
+                    android:id="@+id/sendButton"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|center_vertical"
+                    app:srcCompat="@drawable/ic_send_m" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".views.TeacherStudentSelectionActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/idEdtItemName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/circular_register_button"
+                android:gravity="center"
+                android:hint="@string/student_selection"
+                android:textColor="@color/white"
+                android:textColorHint="#000"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/idCoach"
+                style="@style/parent"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/circular_register_button"
+                android:gravity="center"
+                android:hint="@string/coach"
+                android:textColor="#000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imgCoachProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                app:riv_oval="true"
+                android:src="@drawable/profile_avatar" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/linearlayoutTop"
+        android:layout_marginTop="5dp"
+        android:background="#80D1D1D1" />
+
+    <!-- List view to display list of languages -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:text="@string/students_who_are_registered"
+            android:textColor="#000"
+            android:justificationMode="inter_word"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/view2"
+            android:layout_marginTop="5dp"
+            android:background="#000000" />
+
+        <ListView
+            android:id="@+id/idLVLanguages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:transcriptMode="alwaysScroll" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSkip"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/circular_login_button"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/skip"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgRefresh"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/refresh" />
+</RelativeLayout>

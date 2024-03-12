@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/padding10"
+    android:paddingLeft="@dimen/padding10"
+    android:paddingTop="@dimen/padding5"
+    android:paddingEnd="@dimen/padding10"
+    android:paddingRight="@dimen/padding10"
+    android:paddingBottom="@dimen/padding5">
+
+    <RelativeLayout
+        android:id="@+id/layoutDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtOnlyDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/padding7"
+            android:background="@drawable/rounded_date"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:text="11-06-2016"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutDate"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/padding7"
+            android:text="Me"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/textLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/padding4">
+
+            <TextView
+                android:id="@+id/txtShowMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_right"
+                android:font="@font/roboto_regular"
+                android:padding="@dimen/padding10"
+                android:text="@string/username"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imgPath"
+                android:layout_width="@dimen/paddingImgPath"
+                android:layout_height="@dimen/paddingImgPath"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:background="@drawable/bg_right"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding5"
+                android:src="@drawable/image_load"
+                android:transitionName="@string/app_name"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/padding2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtMsgTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/padding4"
+                android:layout_marginRight="@dimen/padding4"
+                android:gravity="end"
+                android:text="11:40"
+                android:textColor="#787098"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/imgMsgSeen"
+                android:layout_width="@dimen/padding12"
+                android:layout_height="@dimen/padding12"
+                app:srcCompat="@drawable/ic_check_delivery" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

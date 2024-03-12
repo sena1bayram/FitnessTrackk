@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/image_choach"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_coach" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/image_choach"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="12dp"
+                                android:layout_height="match_parent">
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="-22dp"
+                        app:cardBackgroundColor="#fff"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"></LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="0dp"
+                                android:layout_weight=".1"
+                                android:orientation="vertical">
+                                <FrameLayout
+                                    android:id="@+id/layoutImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp">
+                                    <com.makeramen.roundedimageview.RoundedImageView
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:id="@+id/imageProfileAdd"
+                                        android:src="@drawable/person"
+                                        android:scaleType="fitXY"
+                                        app:riv_oval="true"
+                                        android:layout_height="80dp"
+                                        android:layout_width="80dp"
+                                        android:layout_gravity="center_horizontal"/>
+                                    <TextView
+                                        android:id="@+id/txtAddImage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/add_image"
+                                        android:layout_gravity="center"/>
+                                </FrameLayout>
+                                <TextView
+                                    android:id="@+id/txt_coach_register"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="@string/register"
+                                    android:textColor="#000"
+                                    android:textSize="18dp" />
+
+                                <EditText
+                                    android:id="@+id/et_coach_register"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginTop="12dp"
+                                    android:background="@drawable/circular_darkgray"
+                                    android:drawableLeft="@drawable/ic_emailbox"
+                                    android:drawablePadding="8dp"
+                                    android:ems="10"
+                                    android:importantForAutofill="no"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="@string/email_address"
+                                    android:inputType="textEmailAddress"
+                                    android:padding="4dp"
+                                    android:textColor="@color/loginTextColor"
+                                    android:textSize="12dp" />
+                                <EditText
+                                    android:id="@+id/et_coach_Username"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginTop="12dp"
+                                    android:background="@drawable/circular_darkgray"
+                                    android:drawableLeft="@drawable/ic_user"
+                                    android:drawablePadding="8dp"
+                                    android:ems="10"
+                                    android:importantForAutofill="no"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="@string/username"
+                                    android:inputType="textPersonName"
+                                    android:padding="4dp"
+                                    android:textColor="@color/loginTextColor"
+                                    android:textSize="12dp" />
+                                <EditText
+                                    android:id="@+id/et_coach_Password"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginTop="12dp"
+                                    android:background="@drawable/circular_darkgray"
+                                    android:drawableLeft="@drawable/ic_passbox"
+                                    android:drawablePadding="8dp"
+                                    android:ems="10"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="@string/password"
+                                    android:importantForAutofill="no"
+                                    android:inputType="textPassword"
+                                    android:padding="4dp"
+                                    android:textColor="@color/loginTextColor"
+                                    android:textSize="12dp" />
+                                <EditText
+                                    android:id="@+id/et_coach_Password_repeated"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginTop="12dp"
+                                    android:background="@drawable/circular_darkgray"
+                                    android:drawableLeft="@drawable/ic_passbox"
+                                    android:drawableRight="@drawable/ic_visibility_off_24dp"
+                                    android:drawablePadding="8dp"
+                                    android:ems="10"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="@string/repeat_password"
+                                    android:importantForAutofill="no"
+                                    android:inputType="textPassword"
+                                    android:padding="4dp"
+                                    android:textColor="@color/loginTextColor"
+                                    android:textSize="12dp" />
+                                <CheckBox
+                                    android:layout_width="wrap_content"
+                                    android:buttonTint="@color/loginTextColor"
+                                    android:textSize="10dp"
+                                    android:id="@+id/checkBoxCoach"
+                                    android:textColor="@color/loginTextColor"
+                                    android:layout_marginTop="8dp"
+                                    android:text="@string/privacy_and_terms_of_use"
+                                    android:layout_height="wrap_content"/>
+                                <Button
+                                    android:id="@+id/btnRegisterCoach"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginTop="12dp"
+                                    android:background="@drawable/button"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:text="@string/register"
+                                    android:textSize="14dp"
+                                    android:layout_marginBottom="32dp"
+                                    android:textAllCaps="false"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"></LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

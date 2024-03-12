@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.dokka'
+apply plugin: 'maven-publish'
+
+buildscript {
+    ext {
+        kotlin_version = '1.5.20'
+        dokka_version = '1.6.0'
+    }
+    repositories {
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:${dokka_version}"
+    }
+}
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 31
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.5.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+}
+
+ext {
+    PUBLISH_GROUP_ID = 'org.aviran.cookiebar2'
+    PUBLISH_VERSION = '1.1.5'
+    PUBLISH_ARTIFACT_ID = 'cookiebar2'
+}
+
+
+
+def publish_module_path = "${rootProject.projectDir}/apublishing-scripts/publish-module.gradle"
+
+if (project.file(publish_module_path).exists()) {
+    apply from: "${publish_module_path}"
+}
+else {
+    project(':cookiebar2').afterEvaluate {
+        publishing {
+            publications {
+
+                release(MavenPublication) {
+                    from components.release
+                    groupId = PUBLISH_GROUP_ID
+                    artifactId = PUBLISH_ARTIFACT_ID
+                    version = PUBLISH_GROUP_ID
+                }
+            }
+        }
+    }
+}

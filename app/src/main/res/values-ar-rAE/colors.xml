@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cookiebar">#1C1C1C</color>
+    <color name="colorPrimaryDark">#7C54FF</color>
+    <color name="offline">#bfbfbf</color>
+    <color name="online">#4caf50</color>
+    <color name="colorBlack">#000000</color>
+
+
+</resources>
