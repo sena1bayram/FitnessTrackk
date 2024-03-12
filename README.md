@@ -53,3 +53,9 @@ Uygulama Hedef Kitlesi
 Uygulamanın teknik özellikleri ise şu şekilde: Kodlamada kullanılan dil Javadır, web 
 servis olarak firebase kullanılmıştır ve çoklu dil desteği mevcuttur (Türkçe, İngilizce, 
 Fransızca, Arapça)
+
+
+
+
+Gerekli raporu Senanur Bayram 422903 dosyasından bulabilirsiniz
+
